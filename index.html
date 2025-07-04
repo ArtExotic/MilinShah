@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MilionFX</title>
+    <title>VFX & Crowd TD Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
     <style>
@@ -35,6 +35,20 @@
         .glow {
             box-shadow: 0 0 15px rgba(79, 70, 229, 0.5);
         }
+		.slider-viewport::-webkit-scrollbar { display: none; }
+		.slider-viewport {
+		  overflow: hidden;
+		  width: 1050px; /* 3 cards x 350px each */
+		  margin: 0 auto;
+		}
+		.slider-track {
+		  display: flex;
+		  animation: scrollLoop 20s linear infinite;
+		}
+		@keyframes scrollLoop {
+		  0%   { transform: translateX(0); }
+		  100% { transform: translateX(-1050px); } /* scroll 3 cards */
+		}
     </style>
 </head>
 <body class="min-h-screen">
@@ -43,7 +57,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
-                    <span class="text-xl font-bold code-font gradient-text">MilionFX.com</span>
+                    <span class="text-xl font-bold code-font gradient-text">Portfolio</span>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#home" class="text-gray-300 hover:text-white transition">Home</a>
@@ -92,7 +106,7 @@
             <div class="md:w-1/2 flex justify-center">
                 <div class="relative w-full max-w-md">
                     <div class="absolute inset-0 bg-indigo-600 rounded-full filter blur-3xl opacity-20 animate-pulse"></div>
-                    <img src="Images/Profile.png" alt="Portrait of a technical director in a studio environment with complex visual effects rendering on multiple monitors" class="relative rounded-full w-full max-w-md border-4 border-gray-700 shadow-xl" />
+                    <img src="E:\Website\Portfolio-Website\Images\Profile.png" alt="Portrait of a technical director in a studio environment with complex visual effects rendering on multiple monitors" class="relative rounded-full w-full max-w-md border-4 border-gray-700 shadow-xl" />
                 </div>
             </div>
         </div>
@@ -117,16 +131,23 @@
   </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+	
+    <section id="projects" class="py-10 px-3">
         <div class="text-center mb-16">
             <h2 class="text-3xl md:text-4xl font-bold mb-4">Featured <span class="gradient-text">Projects</span></h2>
             <p class="text-gray-400 max-w-2xl mx-auto">A showcase of my work in visual effects and crowd simulation across various productions</p>
         </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+		
+		<div class="slider-viewport">
+		<div class="slider-track">
+			<!-- Project Cards (10 + 3 clones for loop) -->
+          <!-- 10 Project Cards + 3 clones for smooth looping -->
+          <!-- Repeat these as needed -->
+          <!-- Project 1 -->
+		
             <!-- Project 1 -->
-            <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg glow hover:glow-md">
-                <div class="relative h-64 overflow-hidden">
+			<div class="bg-gray-800 min-w-[350px] max-w-[350px] p-4 mx-1 rounded-lg shadow-lg">
+				<div class="relative h-64 overflow-hidden">
                     <img src="Images/nimona.png" alt="Large-scale fantasy battle scene with thousands of AI-driven characters clashing, magical effects and dynamic lighting" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
                 </div>
                 <div class="p-6">
@@ -144,7 +165,7 @@
             </div>
             
             <!-- Project 2 -->
-            <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg glow hover:glow-md">
+            <div class="bg-gray-800 min-w-[350px] max-w-[350px] p-4 mx-1 rounded-lg shadow-lg">
                 <div class="relative h-64 overflow-hidden">
                     <img src="Images/masters_of_the_airs.png" alt="Destruction simulation showing a collapsing skyscraper with realistic physics, debris and dust effects" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
                 </div>
@@ -163,7 +184,7 @@
             </div>
             
             <!-- Project 3 -->
-            <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg glow hover:glow-md">
+            <div class="bg-gray-800 min-w-[350px] max-w-[350px] p-4 mx-1 rounded-lg shadow-lg">
                 <div class="relative h-64 overflow-hidden">
                     <img src="Images/Furiosa.png" alt="Fantasy creature made of fire and magic particles with dynamic simulation and secondary motion effects" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
                 </div>
@@ -182,7 +203,7 @@
             </div>
 			
 			<!-- Project 4 -->
-            <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg glow hover:glow-md">
+            <div class="bg-gray-800 min-w-[350px] max-w-[350px] p-4 mx-1 rounded-lg shadow-lg">
                 <div class="relative h-64 overflow-hidden">
                     <img src="Images/DUNE_2.png" alt="Fantasy creature made of fire and magic particles with dynamic simulation and secondary motion effects" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
                 </div>
@@ -201,7 +222,7 @@
             </div>
 			
 			<!-- Project 5 -->
-            <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg glow hover:glow-md">
+            <div class="bg-gray-800 min-w-[350px] max-w-[350px] p-4 mx-1 rounded-lg shadow-lg">
                 <div class="relative h-64 overflow-hidden">
                     <img src="Images/The_Traveller.png" alt="Fantasy creature made of fire and magic particles with dynamic simulation and secondary motion effects" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
                 </div>
@@ -220,7 +241,7 @@
             </div>
 			
 			<!-- Project 6 -->
-            <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg glow hover:glow-md">
+            <div class="bg-gray-800 min-w-[350px] max-w-[350px] p-4 mx-1 rounded-lg shadow-lg">
                 <div class="relative h-64 overflow-hidden">
                     <img src="Images/LordOfTheRings.png" alt="Fantasy creature made of fire and magic particles with dynamic simulation and secondary motion effects" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
                 </div>
@@ -239,7 +260,7 @@
             </div>
 			
 			<!-- Project 7 -->
-            <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg glow hover:glow-md">
+            <<div class="bg-gray-800 min-w-[350px] max-w-[350px] p-4 mx-1 rounded-lg shadow-lg">
                 <div class="relative h-64 overflow-hidden">
                     <img src="Images/skyForce.png" alt="Fantasy creature made of fire and magic particles with dynamic simulation and secondary motion effects" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
                 </div>
@@ -258,9 +279,9 @@
             </div>
 			
 			<!-- Project 8 -->
-            <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg glow hover:glow-md">
+            <div class="bg-gray-800 min-w-[350px] max-w-[350px] p-4 mx-1 rounded-lg shadow-lg">
                 <div class="relative h-64 overflow-hidden">
-                    <img src="Images/mickey17.png" alt="Fantasy creature made of fire and magic particles with dynamic simulation and secondary motion effects" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                    <img src="E:\Website\Portfolio-Website\Images\mickey17.png" alt="Fantasy creature made of fire and magic particles with dynamic simulation and secondary motion effects" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
                 </div>
                 <div class="p-6">
                     <div class="flex justify-between items-start mb-2">
@@ -279,9 +300,9 @@
 			
 			
 			<!-- Project 9 -->
-            <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg glow hover:glow-md">
+            <div class="bg-gray-800 min-w-[350px] max-w-[350px] p-4 mx-1 rounded-lg shadow-lg">
                 <div class="relative h-64 overflow-hidden">
-                    <img src="Images/Ramayana.png" alt="Fantasy creature made of fire and magic particles with dynamic simulation and secondary motion effects" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                    <img src="E:\Website\Portfolio-Website\Images\Ramayana.png" alt="Fantasy creature made of fire and magic particles with dynamic simulation and secondary motion effects" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
                 </div>
                 <div class="p-6">
                     <div class="flex justify-between items-start mb-2">
@@ -295,6 +316,7 @@
                         <span class="text-xs px-2 py-1 bg-gray-700 rounded-full">Python</span>
                     </div>
                 </div>
+				
             </div>
         </div>
     </section>
@@ -549,6 +571,19 @@
     </footer>
 
     <script>
+		// <!-- Auto-scroll JS -->
+		const scrollRow = document.getElementById('scrollRow');
+		const speed = 0.5; // pixels per frame (adjust for speed)
+
+		function animateScroll() {
+		  scrollRow.scrollLeft += speed;
+		  if (scrollRow.scrollLeft >= scrollRow.scrollWidth - scrollRow.clientWidth) {
+			scrollRow.scrollLeft = 0;
+		  }
+		  requestAnimationFrame(animateScroll);
+		}
+
+		requestAnimationFrame(animateScroll);
         // Mobile menu toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
