@@ -53,14 +53,12 @@
 </head>
 <body class="min-h-screen">
 	<!-- YouTube Background Video -->
-	<div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10">
-	  <iframe
-		class="w-full h-full absolute top-0 left-0 pointer-events-none"
-		src="https://www.youtube.com/embed/KADkIEq2JAU?autoplay=1&mute=1&controls=0&loop=1&playlist=KADkIEq2JAU&modestbranding=1&showinfo=0"
-		frameborder="0"
-		allow="autoplay; encrypted-media"
-		allowfullscreen
-	  ></iframe>
+	<div class="fixed top-0 left-0 w-full h-full overflow-hidden z-[-1]">
+	  <!-- Local .mp4 video recommended for mobile autoplay support -->
+	  <video autoplay muted loop playsinline class="w-full h-full object-cover">
+		<source src="videos/bg-loop.mp4" type="video/mp4" />
+		Your browser does not support HTML5 video.
+	  </video>
 	</div>
 	
 	
@@ -295,7 +293,7 @@
 			<!-- Project 8 -->
             <div class="bg-gray-800 min-w-[350px] max-w-[350px] p-4 mx-1 rounded-lg shadow-lg">
                 <div class="relative h-64 overflow-hidden">
-                    <img src="E:\Website\Portfolio-Website\Images\mickey17.png" alt="Fantasy creature made of fire and magic particles with dynamic simulation and secondary motion effects" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                    <img src="Images/mickey17.png" alt="Fantasy creature made of fire and magic particles with dynamic simulation and secondary motion effects" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
                 </div>
                 <div class="p-6">
                     <div class="flex justify-between items-start mb-2">
@@ -316,7 +314,7 @@
 			<!-- Project 9 -->
             <div class="bg-gray-800 min-w-[350px] max-w-[350px] p-4 mx-1 rounded-lg shadow-lg">
                 <div class="relative h-64 overflow-hidden">
-                    <img src="E:\Website\Portfolio-Website\Images\Ramayana.png" alt="Fantasy creature made of fire and magic particles with dynamic simulation and secondary motion effects" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                    <img src="Images/Ramayana.png" alt="Fantasy creature made of fire and magic particles with dynamic simulation and secondary motion effects" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
                 </div>
                 <div class="p-6">
                     <div class="flex justify-between items-start mb-2">
